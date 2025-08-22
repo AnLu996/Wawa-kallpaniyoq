@@ -1,7 +1,16 @@
 .inclusive-highlight {
-  background-color: yellow;
-  cursor: help;
+  background-color: #fff59d;
+  cursor: pointer;
   position: relative;
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  transition: background 0.2s;
+  -webkit-text-fill-color: initial !important;
+  color: #222 !important;
+}
+
+.inclusive-highlight:hover {
+  background-color: #ffe082;
 }
 
 .inclusive-highlight:hover::after {
@@ -9,11 +18,19 @@
   position: absolute;
   background: #222;
   color: #fff;
-  padding: 4px 8px;
+  padding: 6px 12px;
   border-radius: 6px;
   white-space: nowrap;
   z-index: 1000;
-  font-size: 12px;
+  font-size: 13px;
   top: 120%;
   left: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  opacity: 0.95;
+  animation: fadeIn 0.2s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px);}
+  to { opacity: 0.95; transform: translateY(0);}
 }
